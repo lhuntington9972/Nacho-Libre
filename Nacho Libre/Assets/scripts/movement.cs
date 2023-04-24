@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class playerTest : MonoBehaviour
+public class movement : MonoBehaviour
 {
     [SerializeField]
     NavMeshAgent agent;
