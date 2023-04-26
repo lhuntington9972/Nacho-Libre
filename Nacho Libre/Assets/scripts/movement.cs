@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class movement : MonoBehaviour
 {
+    public float flyerScore;
+
     [SerializeField]
     NavMeshAgent agent;
 
@@ -19,6 +21,15 @@ public class movement : MonoBehaviour
             {
                 agent.destination = hit.point;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Flyer")
+        {
+            flyerScore += 1;
+            Debug.Log("your score is now: " + flyerScore); 
         }
     }
 }

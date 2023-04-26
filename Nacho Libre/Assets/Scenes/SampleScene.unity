@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 234158010}
   m_Layer: 0
   m_Name: Building 4
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -301,7 +301,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234158008}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 317341166}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -661,14 +661,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475118076}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 4.4, y: 7.701, z: 1.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!1 &493558174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1026,7 @@ GameObject:
   - component: {fileID: 726358191}
   m_Layer: 0
   m_Name: Building 2
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1076,7 +1076,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726358189}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1145,7 +1145,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &774455574
 Transform:
@@ -1155,7 +1155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774455573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8280582, y: -6.7946815, z: 0.08174896}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1163,7 +1163,7 @@ Transform:
   - {fileID: 2014265087}
   - {fileID: 405075570}
   - {fileID: 1908875762}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 836303087}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774927785
@@ -1754,6 +1754,7 @@ Transform:
   - {fileID: 726358190}
   - {fileID: 1136097005}
   - {fileID: 234158009}
+  - {fileID: 774455574}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2439,7 +2440,7 @@ GameObject:
   - component: {fileID: 1136097006}
   m_Layer: 0
   m_Name: Building 3
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2489,7 +2490,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136097004}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2553,6 +2554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1194138285}
+  - component: {fileID: 1194138286}
   m_Layer: 0
   m_Name: Flyers
   m_TagString: Untagged
@@ -2575,6 +2577,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1194138286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194138284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94447b53920404e71a2cceef3a4700f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyers: {fileID: 6688871015063260920, guid: a7ded9b33f27f4590b4448a68b4512cc, type: 3}
 --- !u!1 &1416885508
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,6 +3076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc82b7dd4cff45198bf86386bc5def1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyerScore: 0
   agent: {fileID: 1471298380}
 --- !u!1 &1543602607
 GameObject:
@@ -3419,7 +3435,7 @@ GameObject:
   - component: {fileID: 1857560821}
   m_Layer: 0
   m_Name: Building 1
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3432,7 +3448,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857560816}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
