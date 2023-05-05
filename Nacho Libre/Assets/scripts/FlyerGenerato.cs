@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class FlyerGenerato : MonoBehaviour
 {
-    public GameObject flyers;
+    public GameObject flyer1;
+    public GameObject flyer2;
+    public GameObject flyer3;
+    private GameObject flyers;
+    private float flyernum;
     private float betweenSpawns;
     private Vector3 spawnLocation;
     private float totalSpawnCount;
@@ -14,6 +18,7 @@ public class FlyerGenerato : MonoBehaviour
     {
         betweenSpawns = 3f;
         totalSpawnCount = 0f;
+        flyers = flyer1;
     }
 
     // Update is called once per frame
@@ -33,6 +38,17 @@ public class FlyerGenerato : MonoBehaviour
             if (totalSpawnCount >= 5)
             {
                 betweenSpawns = 1f;
+            }
+            flyernum = Random.Range(1, 4);
+            if (flyernum == 1)
+            {
+                flyers = flyer1;
+            } else if (flyernum == 2)
+            {
+                flyers = flyer2;
+            } else if (flyernum == 3)
+            {
+                flyers = flyer3;
             }
             yield return new WaitForSeconds(betweenSpawns);
             spawnLocation = new Vector3(Mathf.Round(Random.Range(-14f, 14f)), 1, Mathf.Round(Random.Range(-14f, 14f)));
