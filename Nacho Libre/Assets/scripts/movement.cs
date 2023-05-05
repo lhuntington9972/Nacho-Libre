@@ -10,6 +10,16 @@ public class movement : MonoBehaviour
     [SerializeField]
     NavMeshAgent agent;
 
+    [SerializeField]
+    GameObject indicatorPrefab;
+
+    GameObject indicator;
+
+    private void Start()
+    {
+        indicator = Instantiate(indicatorPrefab);
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -20,6 +30,7 @@ public class movement : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100))
             {
                 agent.destination = hit.point;
+                indicator.transform.position = hit.point;
             }
         }
     }

@@ -7317,6 +7317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyerScore: 0
   agent: {fileID: 1471298380}
+  indicatorPrefab: {fileID: 6819096420999205476, guid: c7b7e63f627fe4e37b380227552aaaa6,
+    type: 3}
 --- !u!1 &1497719596
 GameObject:
   m_ObjectHideFlags: 0
