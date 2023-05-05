@@ -19,6 +19,7 @@ public class FlyerGenerato : MonoBehaviour
         betweenSpawns = 3f;
         totalSpawnCount = 0f;
         flyers = flyer1;
+        StartCoroutine(Spawn());
     }
 
     // Update is called once per frame
@@ -33,11 +34,14 @@ public class FlyerGenerato : MonoBehaviour
     IEnumerator Spawn()
     {
         Debug.Log("spawning initiated!");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 25; i++)
         {
-            if (totalSpawnCount >= 5)
+            if (totalSpawnCount >= 15)
             {
                 betweenSpawns = 1f;
+            } else if (totalSpawnCount >= 5)
+            {
+                betweenSpawns = 2f;
             }
             flyernum = Random.Range(1, 4);
             if (flyernum == 1)
