@@ -28,7 +28,7 @@ public class movement : MonoBehaviour
     private void Start()
     {
         indicator = Instantiate(indicatorPrefab);
-        game1Countdown = 10f;
+        game1Countdown = 5f;
         currentTask = 1;
     }
 
@@ -46,10 +46,10 @@ public class movement : MonoBehaviour
             }
         }
 
-        if (flyerScore < 2 && currentTask == 1)
+        if (flyerScore < 25 && currentTask == 1)
         {
             scoreText.text = "Score: " + flyerScore;
-        } else if (flyerScore >= 2 && currentTask == 1)
+        } else if (flyerScore >= 25 && currentTask == 1)
         {
             StartCoroutine(game1FinishCountdown());
         }
@@ -61,7 +61,7 @@ public class movement : MonoBehaviour
             currentTaskString = "Find something else do to!";
         } else if (currentTask == 1)
         {
-            currentTaskString = "Eradicate uninclusive flyers!";
+            currentTaskString = "Tear down uninclusive flyers in the plaza!";
         } else if (currentTask == 2)
         {
             currentTaskString = "SLAM GORILLAS!!!";

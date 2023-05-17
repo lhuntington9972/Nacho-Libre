@@ -55,7 +55,7 @@ public class FlyerGenerato : MonoBehaviour
                 flyers = flyer3;
             }
             yield return new WaitForSeconds(betweenSpawns);
-            spawnLocation = new Vector3(Mathf.Round(Random.Range(-14f, 14f)), 1, Mathf.Round(Random.Range(-14f, 14f)));
+            spawnLocation = new Vector3(Mathf.Round(Random.Range(-10f, 10f)), 1, Mathf.Round(Random.Range(-14f, 14f)));
             Instantiate(flyers, spawnLocation, Quaternion.identity);
             totalSpawnCount += 1;
         }
